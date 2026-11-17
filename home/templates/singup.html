@@ -5,6 +5,7 @@
 <h1>Singup</h1>
 
 <form >
+    {% csrf_token %}
     <p>
         <label>Username</label>
         <input type='text' name="username">
@@ -20,4 +21,7 @@
         <button type="submit">Singup Here</button>
 </form>
 
+{% for message in messages %}
+<p>{{message}}</p>
+{% endfor %}
 {% endblock %}
